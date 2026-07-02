@@ -1,0 +1,19 @@
+# React
+codementor-ai-frontend/node_modules/
+codementor-ai-frontend/dist/
+
+# Python
+codementor-ai-backend/venv/
+codementor-ai-backend/__pycache__/
+*.pyc
+
+# Environment
+codementor-ai-backend/.env
+
+# Database
+codementor-ai-backend/instance/
+
+# VS Code
+.vscode/
+key.txt
+key2.txt

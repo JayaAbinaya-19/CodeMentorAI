@@ -1,0 +1,23 @@
+:root {
+  --bg: #f3f5f7;
+  --surface: #ffffff;
+  --ink: #1c2129;
+  --ink-soft: #5b6472;
+  --ink-faint: #9aa3b0;
+  --line: #e1e5ea;
+  --accent: #1f6f4a;       /* terminal green — primary actions */
+  --accent-soft: #e8f3ee;
+  --warn: #b5481f;         /* rust — errors, warnings */
+  --warn-soft: #fbeee6;
+  --code-bg: #1c2129;
+  --code-text: #d7dce3;
+
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "IBM Plex Sans", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", "Consolas", monospace;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+}

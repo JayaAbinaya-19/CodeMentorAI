@@ -1,0 +1,238 @@
+.interview-container {
+  max-width: 820px;
+  margin: 2.5rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding-bottom: 3rem;
+}
+
+.interview-config {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1.75rem;
+}
+
+.interview-config h2 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  margin: 0 0 0.3rem;
+  color: var(--ink);
+}
+
+.interview-config-row {
+  display: flex;
+  gap: 0.8rem;
+  align-items: flex-end;
+  margin-top: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.interview-config-row label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ink-soft);
+}
+
+.interview-config-row select {
+  padding: 0.6rem 0.8rem;
+  border-radius: 8px;
+  border: 1.5px solid var(--line);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  background: var(--bg);
+  color: var(--ink);
+  min-width: 130px;
+}
+
+.generate-btn {
+  padding: 0.7rem 1.3rem;
+  background: var(--ink);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  align-self: flex-end;
+}
+.generate-btn:hover:not(:disabled) { background: var(--accent); }
+.generate-btn:disabled { background: var(--ink-faint); cursor: not-allowed; }
+
+.interview-problem {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1.75rem;
+}
+
+.problem-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.problem-title-row h3 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  margin: 0;
+  color: var(--ink);
+}
+
+.problem-badges { display: flex; gap: 0.4rem; flex-shrink: 0; }
+
+.difficulty-badge {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  text-transform: uppercase;
+}
+.difficulty-badge.easy { background: var(--accent-soft); color: var(--accent); }
+.difficulty-badge.medium { background: #fffbeb; color: #d97706; }
+.difficulty-badge.hard { background: var(--warn-soft); color: var(--warn); }
+
+.topic-badge {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--ink-soft);
+  border: 1px solid var(--line);
+}
+
+.problem-statement { color: var(--ink); line-height: 1.7; font-size: 0.92rem; }
+
+.problem-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1rem 0;
+  background: var(--bg);
+  border-radius: 8px;
+  padding: 1rem;
+}
+.problem-meta h4 { font-family: var(--font-mono); font-size: 0.72rem; text-transform: uppercase; color: var(--ink-soft); margin: 0 0 0.3rem; }
+.problem-meta p { font-size: 0.88rem; color: var(--ink); margin: 0; }
+
+.problem-section { margin-top: 1rem; }
+.problem-section h4 { font-family: var(--font-mono); font-size: 0.72rem; text-transform: uppercase; color: var(--ink-soft); margin: 0 0 0.5rem; }
+.problem-section ul { margin: 0 0 0 1.2rem; padding: 0; font-size: 0.88rem; color: var(--ink); line-height: 1.7; }
+
+.example-block {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.6rem;
+  font-size: 0.88rem;
+}
+.example-row { display: flex; gap: 0.6rem; align-items: baseline; margin-bottom: 0.3rem; }
+.example-row span { font-family: var(--font-mono); font-size: 0.75rem; color: var(--ink-soft); width: 3.5rem; flex-shrink: 0; }
+.example-row code { font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent); }
+.example-explanation { font-size: 0.82rem; color: var(--ink-soft); font-style: italic; margin: 0.4rem 0 0; }
+
+.hint-toggle {
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0.4rem 0.8rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  cursor: pointer;
+  margin-bottom: 0.6rem;
+}
+.hint-toggle:hover { border-color: var(--ink); color: var(--ink); }
+.hints-list { margin: 0 0 0 1.2rem; padding: 0; font-size: 0.88rem; color: var(--ink); line-height: 1.8; }
+
+.interview-editor {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.interview-editor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--line);
+}
+.interview-editor-header h3 { font-family: var(--font-display); font-size: 1rem; margin: 0; color: var(--ink); }
+.interview-lang-label { font-family: var(--font-mono); font-size: 0.78rem; color: var(--ink-soft); }
+
+.interview-editor-actions {
+  display: flex;
+  gap: 0.7rem;
+  padding: 1rem 1.5rem;
+}
+
+.interview-evaluation {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1.75rem;
+}
+
+.evaluation-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.verdict-badge {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.4rem 1rem;
+  border-radius: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.verdict-accepted { background: var(--accent-soft); color: var(--accent); }
+.verdict-wrong { background: var(--warn-soft); color: var(--warn); }
+.verdict-incomplete { background: #fffbeb; color: #d97706; }
+
+.evaluation-score {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.interviewer-feedback {
+  background: var(--bg);
+  border-left: 3px solid var(--ink);
+  padding: 0.8rem 1rem;
+  border-radius: 0 8px 8px 0;
+  font-size: 0.92rem;
+  color: var(--ink);
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+
+.evaluation-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.eval-section ul { margin: 0.4rem 0 0 1.2rem; padding: 0; font-size: 0.88rem; color: var(--ink); line-height: 1.7; }
+
+.optimal-approach { margin-top: 1rem; }
+.optimal-approach p { font-size: 0.92rem; color: var(--ink); line-height: 1.6; margin: 0.4rem 0 0; }

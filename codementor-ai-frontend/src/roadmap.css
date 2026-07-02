@@ -1,0 +1,198 @@
+.roadmap-container {
+  max-width: 820px;
+  margin: 2.5rem auto;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(28, 33, 41, 0.06);
+  padding: 2rem;
+}
+
+.roadmap-header { margin-bottom: 1.5rem; }
+
+.roadmap-header h2 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: var(--ink);
+  margin: 0 0 0.3rem;
+}
+
+.roadmap-subtitle {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+.roadmap-stats {
+  display: flex;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.roadmap-stat {
+  flex: 1;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.roadmap-stat-value {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.roadmap-stat-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ink-soft);
+}
+
+.roadmap-overall-bar {
+  height: 6px;
+  background: var(--line);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.roadmap-overall-fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 999px;
+  transition: width 0.5s ease;
+}
+
+.roadmap-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.roadmap-category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+
+.roadmap-category-header h3 {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  color: var(--ink);
+  margin: 0;
+}
+
+.roadmap-category-count {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--ink-soft);
+}
+
+.roadmap-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.roadmap-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.8rem;
+  border-radius: 8px;
+  border: 1.5px solid var(--line);
+  background: var(--surface);
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  transition: all 0.15s ease;
+  text-align: left;
+}
+
+.roadmap-item:hover { transform: translateY(-1px); box-shadow: 0 3px 8px rgba(0,0,0,0.08); }
+
+.roadmap-item-icon { font-size: 0.9rem; }
+.roadmap-item-name { color: var(--ink); font-weight: 500; }
+
+.roadmap-item-status {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-left: 0.2rem;
+}
+
+.status-not-started {
+  border-color: var(--line);
+  background: var(--surface);
+}
+.status-not-started .roadmap-item-status { color: var(--ink-faint); }
+.status-not-started .roadmap-item-icon { color: var(--ink-faint); }
+
+.status-learning {
+  border-color: #d97706;
+  background: #fffbeb;
+}
+.status-learning .roadmap-item-name { color: #92400e; }
+.status-learning .roadmap-item-status { color: #d97706; }
+.status-learning .roadmap-item-icon { color: #d97706; }
+
+.status-confident {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+.status-confident .roadmap-item-name { color: var(--accent); }
+.status-confident .roadmap-item-status { color: var(--accent); }
+.status-confident .roadmap-item-icon { color: var(--accent); }
+
+.roadmap-legend {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+
+.legend-item {
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  font-family: var(--font-mono);
+}
+.roadmap-item-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.practice-btn {
+  display: none;
+  position: absolute;
+  right: -28px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--accent);
+  border: none;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  font-size: 0.7rem;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 0;
+  z-index: 1;
+}
+
+.roadmap-item-wrap:hover .practice-btn {
+  display: flex;
+}
