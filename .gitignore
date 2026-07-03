@@ -2,18 +2,16 @@
 codementor-ai-frontend/node_modules/
 codementor-ai-frontend/dist/
 
-# Python
+# Backend
 codementor-ai-backend/venv/
 codementor-ai-backend/__pycache__/
-*.pyc
-
-# Environment
-codementor-ai-backend/.env
-
-# Database
 codementor-ai-backend/instance/
+codementor-ai-backend/.env
+*.pyc
 
 # VS Code
 .vscode/
+
+# Secrets
 key.txt
 key2.txt
