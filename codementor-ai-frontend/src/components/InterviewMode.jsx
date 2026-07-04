@@ -51,7 +51,7 @@ function InterviewMode() {
     setShowHints(false);
 
     try {
-      const response = await fetch("http://localhost:5000/api/interview/generate", {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/interview/generate`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ topic, difficulty, language }),
@@ -76,7 +76,7 @@ function InterviewMode() {
     setEvaluation(null);
 
     try {
-      const response = await fetch("http://localhost:5000/api/interview/evaluate", {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/interview/evaluate`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ problem, solution, language }),

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Login from "./login";
-import Register from "./Register";
+import Register from "./register";
 import ForgotPassword from "./ForgotPassword";
 
 function Auth({ onAuthSuccess }) {

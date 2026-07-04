@@ -6,7 +6,7 @@ function Profile({ user }) {
 
   useEffect(() => {
     if (!user?.id) return;
-    fetch(`http://localhost:5000/api/profile/${user.id}`)
+    fetch(`${import.meta.env.VITE_API_URL}/api/profile/${user.id}`)
       .then((res) => res.json())
       .then((data) => {
         setProfile(data);

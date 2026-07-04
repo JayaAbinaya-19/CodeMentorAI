@@ -10,7 +10,7 @@ function History({ user }) {
 
   useEffect(() => {
     if (!user?.id) return;
-    fetch(`http://localhost:5000/api/history/${user.id}`)
+    fetch(`${import.meta.env.VITE_API_URL}/api/history/${user.id}`)
       .then((res) => res.json())
       .then((data) => {
         setSubmissions(data);
@@ -25,7 +25,7 @@ function History({ user }) {
   const fetchTips = () => {
     if (!user?.id) return;
     setTipsLoading(true);
-    fetch(`http://localhost:5000/api/learning-tips/${user.id}`)
+    fetch(`${import.meta.env.VITE_API_URL}/api/learning-tips/${user.id}`)
       .then((res) => res.json())
       .then((data) => {
         setTips(data);

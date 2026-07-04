@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import Auth from "./components/Auth";
 import CodeEditor from "./components/CodeEditor";
-import LearningAssistant from "./components/LearningAssistant";
+import LearningAssistant from "./components/learningAssistant";
 import History from "./components/History";
-import Profile from "./components/Profile";
+import Profile from "./components/profile";
 import InterviewMode from "./components/InterviewMode";
 import Toast from "./components/Toast";
 import "./theme.css";
